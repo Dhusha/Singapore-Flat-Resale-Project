@@ -34,7 +34,7 @@ def main():
 
         with right:
             # Displaying an image
-            st.image(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\Sibnbngaporeflatesimage.jpg")
+            st.image(r"Sibnbngaporeflatesimage.jpg")
 
         left, right = st.columns([2, 3])
         with left:
