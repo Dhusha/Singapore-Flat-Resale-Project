@@ -110,15 +110,15 @@ def main():
         st.write("This application serves as a valuable tool for both potential buyers and sellers in the resale flat market in Singapore. By providing accurate resale price predictions, it helps users make informed decisions.")
     
     elif selected == 'Prediction':
-        with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\town.json", 'r') as file:
+        with open(r"town.json", 'r') as file:
             town = json.load(file)
-        with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\flat_type.json", 'r') as file:
+        with open(r"flat_type.json", 'r') as file:
             flat_type = json.load(file)
-        with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\street_name.json", 'r') as file:
+        with open(r"street_name.json", 'r') as file:
             street_name = json.load(file)
-        with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\storey_range.json", 'r') as file:
+        with open(r"storey_range.json", 'r') as file:
             storey_range = json.load(file)
-        with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\flat_model.json", 'r') as file:
+        with open(r"flat_model.json", 'r') as file:
             flat_model = json.load(file)
 
         # Define the possible values for the dropdown menus
@@ -136,8 +136,8 @@ def main():
             with col1:
                 st.write(' ')
                 month = st.selectbox("Month", months, key=1)
-                Town = st.selectbox("Town", town, key=2)
-                Flat_type = st.selectbox('Flat Type', flat_type, key=3)
+                Town = st.selectbox("Town", Town, key=2)
+                Flat_type = st.selectbox('Flat Type', Flat_type, key=3)
                 Block = st.number_input("Enter block", value=1, step=1)
                 Street_name = st.selectbox("Street Name", Street_name, key=4)
             
@@ -159,23 +159,23 @@ def main():
                 """, unsafe_allow_html=True)
 
             if submit_button:
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\data.pkl", 'rb') as file:
+                with open(r"data.pkl.gz", 'rb') as file:
                     dt = pickle.load(file)
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\randomforest.pkl", 'rb') as f:
+                with open(r"randomforest.pkl", 'rb') as f:
                     rf = pickle.load(f)
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\linearregg.pkl", 'rb') as f:
+                with open(r"linearregg.pkl", 'rb') as f:
                     lr = pickle.load(f)
 
                 # Load label encoders
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\label_encoder1twn.pkl", 'rb') as file:
+                with open(r"label_encoder1twn.pkl", 'rb') as file:
                     le1 = pickle.load(file)
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\label_encoder2FT.pkl", 'rb') as file:
+                with open(r"label_encoder2FT.pkl", 'rb') as file:
                     le2 = pickle.load(file)
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\label_encoder3SN.pkl", 'rb') as file:
+                with open(r"label_encoder3SN.pkl", 'rb') as file:
                     le3 = pickle.load(file)
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\label_encoder4SR.pkl", 'rb') as file:
+                with open(r"label_encoder4SR.pkl", 'rb') as file:
                     le4 = pickle.load(file)
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\label_encoder5FM.pkl", 'rb') as file:
+                with open(r"label_encoder5FM.pkl", 'rb') as file:
                     le5 = pickle.load(file)
 
                 # Encode categorical variables
