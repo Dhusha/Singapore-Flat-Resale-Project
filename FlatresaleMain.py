@@ -161,7 +161,7 @@ def main():
 
             if submit_button:
                 with gzip.open('data.pkl.gz', 'rb') as f:
-                    dt = f.read()
+                    dt = pickle.load(f)
                 with open(r"randomforest.pkl", 'rb') as f:
                     rf = pickle.load(f)
                 with open(r"linearregg.pkl", 'rb') as f:
