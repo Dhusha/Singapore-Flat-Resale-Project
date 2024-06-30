@@ -162,9 +162,9 @@ def main():
                 with open(r"data.pkl.gz", 'rb') as file:
                     dt = pickle.load(file)
                 with open(r"randomforest.pkl", 'rb') as f:
-                    rf = pickle.load(f)
+                    rf = pickle.load(file)
                 with open(r"linearregg.pkl", 'rb') as f:
-                    lr = pickle.load(f)
+                    lr = pickle.load(file)
 
                 # Load label encoders
                 with open(r"label_encoder1twn.pkl", 'rb') as file:
