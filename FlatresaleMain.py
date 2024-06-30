@@ -3,6 +3,7 @@ import numpy as np
 import streamlit as st
 import json
 import pickle
+import gzip
 
 def main():
     st.set_page_config(layout="wide")
@@ -159,12 +160,12 @@ def main():
                 """, unsafe_allow_html=True)
 
             if submit_button:
-                with open(r"data.pkl.gz", 'rb') as file:
-                    dt = pickle.load(file)
+                with gzip.open('data.pkl.gz', 'rb') as f:
+                    dt = f.read()
                 with open(r"randomforest.pkl", 'rb') as f:
-                    rf = pickle.load(file)
+                    rf = pickle.load(f)
                 with open(r"linearregg.pkl", 'rb') as f:
-                    lr = pickle.load(file)
+                    lr = pickle.load(f)
 
                 # Load label encoders
                 with open(r"label_encoder1twn.pkl", 'rb') as file:
