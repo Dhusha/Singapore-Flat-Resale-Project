@@ -34,7 +34,7 @@ def main():
 
         with right:
             # Displaying an image
-            st.image(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\Sibnbngaporeflatesimage.jpg", use_column_width=True)
+            st.image(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\Sibnbngaporeflatesimage.jpg")
 
         left, right = st.columns([2, 3])
         with left:
@@ -136,8 +136,8 @@ def main():
             with col1:
                 st.write(' ')
                 month = st.selectbox("Month", months, key=1)
-                Town = st.selectbox("Town", Town, key=2)
-                Flat_type = st.selectbox('Flat Type', Flat_type, key=3)
+                Town = st.selectbox("Town", town, key=2)
+                Flat_type = st.selectbox('Flat Type', flat_type, key=3)
                 Block = st.number_input("Enter block", value=1, step=1)
                 Street_name = st.selectbox("Street Name", Street_name, key=4)
             
