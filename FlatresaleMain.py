@@ -159,7 +159,7 @@ def main():
                 """, unsafe_allow_html=True)
 
             if submit_button:
-                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\dt.pkl", 'rb') as file:
+                with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\data.pkl", 'rb') as file:
                     dt = pickle.load(file)
                 with open(r"C:\Users\tpsna\OneDrive\Desktop\VSCode\Singapore_Project\randomforest.pkl", 'rb') as f:
                     rf = pickle.load(f)
