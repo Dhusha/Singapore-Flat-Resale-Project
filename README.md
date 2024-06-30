@@ -50,7 +50,9 @@ The following is a fundamental outline of the project:
 
 <br/>
 
-## Using the App
+## Deployed Application
+
+You can access the live application here - https://singapore-flat-resale-project-6.onrender.com.
 
 ### Resale Price Prediction
 To predict the resale price of a Singapore Flats, follow these steps:
