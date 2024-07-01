@@ -45,10 +45,6 @@ The following is a fundamental outline of the project:
   - The objective of this study is to construct a machine learning regression model that utilizes the decision tree regressor to accurately forecast the continuous variable 'resale_price'.
     
   - The objective is to develop a Streamlit webpage that enables users to input values for each column and get the expected resale_price value for the flats in Singapore.
-    
-> **_NOTE:_**  To get a comprehensive overview of the project workflow, please refer to the attached document titled "Project_Workflow.pdf".
-
-<br/>
 
 ## Deployed Application
 
